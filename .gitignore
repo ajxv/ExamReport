@@ -1,0 +1,11 @@
+# python generated
+env*/
+*.pot
+*.pyc
+__pycache__
+
+# custom
+*.xlsx
+*.csv
+*.log
+*/uploads/*
