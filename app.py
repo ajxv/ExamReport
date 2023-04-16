@@ -31,5 +31,10 @@ def handleFileUpload(wildcard="*.xlsx"):
     dialog.Destroy()
     return path
 
+@eel.expose
+def generate_report(date, department):
+    
+    print(date, department)
+
 # starting the application  
 eel.start("index.html", mode='firefox')
