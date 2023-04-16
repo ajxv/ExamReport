@@ -30,6 +30,11 @@
 
   <title>Import Data</title>
 
+  <style>
+    .alert {
+      display: none;
+    }
+  </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -39,7 +44,7 @@
   </div>
 
   <div class="file-upload d-flex justify-content-center">
-    <form onsubmit="return false">
+    <form onsubmit="formSubmit(); return false">
       <label class="font-weight-bold h6 mb-3">Import Data</label>
 
       <input type="date" class="form-control mb-1" name="date" id="date" required>
@@ -49,7 +54,13 @@
         <div class="file-select-name" id="noFile">No file chosen...</div>
       </div>
       <input id="filePath" type="text" hidden readonly>
-      <input type="submit" value="Upload" class="btn btn-primary">
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        Uploaded successfully
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <input type="submit" value="Upload" class="btn btn-primary" id="submit-btn" disabled>
     </form>
   </div>
 
